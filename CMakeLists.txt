@@ -14,7 +14,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 # -DNDEBUG: Disables all assert() macros to remove branching in the critical path
 # -pthread: Required for our CPU core pinning
 # ------------------------------------------------------------------------------
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 -march=native -DNDEBUG -pthread -Wall -Wextra")
+#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 -march=native -DNDEBUG -pthread -Wall -Wextra")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -O0 -pthread -Wall -Wextra")
 
 # Include directories so our cpp files can find the headers
 include_directories(${CMAKE_SOURCE_DIR}/include)
@@ -30,3 +31,8 @@ target_link_libraries(benchmark_ringbuffer PRIVATE lob_core pthread)
 # 3. Build the Order Book Latency Benchmark executable (Next Step)
 add_executable(benchmark_lob benchmarks/benchmark_lob.cpp)
 target_link_libraries(benchmark_lob PRIVATE lob_core pthread)
+
+
+# 4. Build the Main HFT Engine Executable
+add_executable(hft_engine src/main.cpp)
+target_link_libraries(hft_engine PRIVATE lob_core pthread)
