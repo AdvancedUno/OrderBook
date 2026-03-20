@@ -1,4 +1,4 @@
-# Ultra-Low Latency Limit Order Book
+# Low Latency Limit Order Book
 
 A high-performance, multi-threaded Limit Order Book (LOB) and matching engine written in C++17. Designed for high-frequency trading (HFT) environments, this engine avoids all kernel-level locks and dynamic memory allocations on the critical path to achieve nanosecond-scale latencies.
 
