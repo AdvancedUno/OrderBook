@@ -10,8 +10,6 @@ namespace lob {
 constexpr std::size_t MAX_ORDERS = 1'000'000;
 constexpr std::size_t MAX_PRICES = 100'000;
 
-// inside include/OrderBook.h
-
 class LimitOrderBook {
 private:
     MemoryPool<Order> order_pool_{MAX_ORDERS};
