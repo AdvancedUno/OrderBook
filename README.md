@@ -30,7 +30,7 @@ The core `LimitOrderBook` is optimized for continuous matching and rapid cancell
 ## Building and Running
 
 ### Prerequisites
-* CMake 3.10+
+* CMake
 * A modern C++17 compiler GCC
 * A Linux environment (for `pthread` thread-affinity features)
 
