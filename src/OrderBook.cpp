@@ -39,7 +39,7 @@ void LimitOrderBook::match_buy_order(MarketMessage msg) {
         }
     }
 
-    // NEW: Update best_ask_ if we fully cleared the top levels
+    // Update best_ask_ if we fully cleared the top levels
     while (best_ask_ < MAX_PRICES && asks_[best_ask_] == nullptr) {
         best_ask_++;
     }
