@@ -5,7 +5,7 @@ A high-performance, multi-threaded Limit Order Book (LOB) and matching engine wr
 ## Performance
 
 In a simulated benchmark utilizing thread-pinning across two CPU cores, the engine achieves:
-* **Throughput:** ~3.04 Million Orders / Second
+* **Throughput:** around 3.04 Million Orders / Second
 * **Total Time for 500k Orders:** 164 ms
 
 ## Architecture & Mechanism Description
